@@ -9,7 +9,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="125dp"
         android:background="@drawable/search_round_rectangle_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
-        android:text="현재 위치 기준 2km(킬로미터) 내의 여성 병원 목록입니다.\n와이파이 연결과 위치 수집 권한에 동의된 경우에만 나타나요!"
+        android:textSize="15dp"
+        android:text="현재 위치 기준 2km(킬로미터) 내의 여성 병원 목록입니다."
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

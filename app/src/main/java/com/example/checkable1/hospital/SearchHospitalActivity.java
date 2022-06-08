@@ -1,6 +1,8 @@
 package com.example.checkable1.hospital;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +19,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.checkable1.R;
 
@@ -38,17 +41,12 @@ public class SearchHospitalActivity extends AppCompatActivity {
     private final String TAG = "TAG_SearchHospital";
 
     //Open API & XML Parsing
-    private final String key = "uIBCojW0wVC9y2Nd2m6dkWLvn72Q3RSNzRIyOUCBbJc8QbY7gFLHV8%2FeqJbAUY3mLaGgCWe5q34%2BrmBQ8mgCJQ%3D%3D";
+    private final String key = "IKD7B6DKZrMraeoRimEhN5K7inB8YFvuRK7hADTCsUTdhTDKoVepV20J4XE0vs9kA21VeP1UHFXBi0DpLt1Ehw%3D%3D";
     HospitalInfo hospitalInfo;
     ArrayList<HospitalInfo> hospitalArray;
 
     //GPS
     GpsInfo gpsInfo;
-    private boolean isAccessFineLocation = false;
-    private boolean isAccessCoarseLocation = false;
-    private boolean isPermission = false;
-    private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
-    private final int PERMISSIONS_ACCESS_COARSE_LOCATION = 1001;
 
     //Current Location
     Location curLocation;
@@ -61,6 +59,9 @@ public class SearchHospitalActivity extends AppCompatActivity {
     ProgressBar progressBar;
     private AlertDialog alertDialog = null;
 
+    //call
+    private final int PERMISSIONS_CALL_PHONE = 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,24 +69,21 @@ public class SearchHospitalActivity extends AppCompatActivity {
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar_searchHospital);
         //화면로드됨
-        //<현재위치 받아오기>
-        //1. Permission 요청
-        //2. GPS 실행
-        callPermission();
+        //1. GPS 실행 (현재위치 받아오기)
 
-        if (!isPermission) {
-            callPermission();
+        gpsInfo = new GpsInfo(this);
+        if (gpsInfo.isGetLocation()) {
+            //현재 경도, 위도 값
+            curLatitude = gpsInfo.getLatitude();
+            curLongitude = gpsInfo.getLongitude();
+
+            Log.d(TAG, "Latitude: " + curLatitude + ", Longitude: " + curLongitude);
+            curLocation = new Location("curLocation");
+            curLocation.setLatitude(curLatitude);
+            curLocation.setLongitude(curLongitude);
         } else {
-            gpsInfo = new GpsInfo(this);
-            if (gpsInfo.isGetLocation()) {
-                //현재 경도, 위도 값
-                curLatitude = gpsInfo.getLatitude();
-                curLongitude = gpsInfo.getLongitude();
-
-                curLocation = new Location("curLocation");
-                curLocation.setLatitude(curLatitude);
-                curLocation.setLongitude(curLongitude);
-            }
+            //Log.d(TAG, "사용자의 현재 위치를 가져오지 못했습니다.");
+            Toast.makeText(this, "위치를 가져오지 못했습니다.", Toast.LENGTH_LONG).show();
         }
 
         //<XML parsing>
@@ -104,10 +102,8 @@ public class SearchHospitalActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         //화면에 띄우기
-                        progressBar.setVisibility(View.GONE);
                         Collections.sort(hospitalArray);
 
-//                        Log.d(TAG, hospitalArray.get(0).hosName);
                         recyclerView = (RecyclerView) findViewById(R.id.recycler_searchHospital);
                         hospitalItemAdapter = new HospitalItemAdapter();
                         hospitalItemAdapter.setHospitalList(hospitalArray);
@@ -115,12 +111,23 @@ public class SearchHospitalActivity extends AppCompatActivity {
                         hospitalItemAdapter.setOnItemClickListener(new HospitalItemAdapter.OnItemClickListener() {
                             @Override
                             public void onItemClick(int position) {
-                                String name = hospitalArray.get(position).hosName;
-                                String tel = "tel:" + hospitalArray.get(position).hosPhoneNumber;
-                                alertDialog = createDialog(name, tel);
-                                alertDialog.show();
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+                                        && checkSelfPermission(Manifest.permission.CALL_PHONE)
+                                        != PackageManager.PERMISSION_GRANTED) {
+
+                                    requestPermissions(
+                                            new String[]{Manifest.permission.CALL_PHONE},
+                                            PERMISSIONS_CALL_PHONE);
+                                } else {
+                                    String name = hospitalArray.get(position).hosName;
+                                    String tel = "tel:" + hospitalArray.get(position).hosPhoneNumber;
+                                    alertDialog = createDialog(name, tel);
+                                    alertDialog.show();
+                                }
                             }
                         });
+
+                        progressBar.setVisibility(View.GONE);
 
                         recyclerView.setAdapter(hospitalItemAdapter);
                         recyclerView.setLayoutManager(new LinearLayoutManager(SearchHospitalActivity.this));
@@ -129,7 +136,6 @@ public class SearchHospitalActivity extends AppCompatActivity {
             }
         }).start();
     }
-
 
     void getHospitalXmlData() throws IOException {
         //공공데이터 url
@@ -141,6 +147,7 @@ public class SearchHospitalActivity extends AppCompatActivity {
         urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8") + "=" + URLEncoder.encode("3172", "UTF-8"));
 
         try {
+            Log.d(TAG, "parsing start");
             URL url = new URL(urlBuilder.toString());
             InputStream inputStream = url.openStream();
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
@@ -203,6 +210,7 @@ public class SearchHospitalActivity extends AppCompatActivity {
                                 if (hospitalInfo.hosName.contains("여성") || hospitalInfo.hosName.contains("산부인과")) {
                                     String distance_string = trimming(distance); //소수점 조정 및 단위(m, km) 변환
 
+                                    //Log.d(TAG, hospitalInfo.hosName);
                                     hospitalInfo.setDistance(distance);
                                     hospitalInfo.setHosDistance_string(distance_string);
                                     hospitalArray.add(hospitalInfo);
@@ -217,49 +225,6 @@ public class SearchHospitalActivity extends AppCompatActivity {
             Log.e(TAG, e.toString());
         }
 
-    }
-
-    //Permission 설정 method
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                                           int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == PERMISSIONS_ACCESS_FINE_LOCATION
-                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-            isAccessFineLocation = true;
-
-        } else if (requestCode == PERMISSIONS_ACCESS_COARSE_LOCATION
-                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-            isAccessCoarseLocation = true;
-        }
-
-        if (isAccessFineLocation && isAccessCoarseLocation) {
-            isPermission = true;
-        }
-    }
-
-    private void callPermission() {
-        // Check the SDK version and whether the permission is already granted or not.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            requestPermissions(
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    PERMISSIONS_ACCESS_FINE_LOCATION);
-
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            requestPermissions(
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                    PERMISSIONS_ACCESS_COARSE_LOCATION);
-        } else {
-            isPermission = true;
-        }
     }
 
     private String trimming(float distance) {
