@@ -87,7 +87,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     // Minimum detection confidence to track a detection.
     private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.6f;
     private static final float MINIMUM_CONFIDENCE_MULTIBOX = 0.1f;
-    private static final float MINIMUM_CONFIDENCE_YOLO = 0.25f;
+    private static final float MINIMUM_CONFIDENCE_YOLO = 0.6f;
 
     private static final boolean MAINTAIN_ASPECT = MODE == DetectorMode.YOLO;
 
