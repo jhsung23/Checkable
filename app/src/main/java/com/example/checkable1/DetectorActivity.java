@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
+import android.widget.TextView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -82,6 +83,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     private enum DetectorMode {
         TF_OD_API, MULTIBOX, YOLO;
     }
+
     private static final DetectorMode MODE = DetectorMode.YOLO;
 
     // Minimum detection confidence to track a detection.
@@ -117,6 +119,9 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     private byte[] luminanceCopy;
 
     private BorderedText borderedText;
+
+    private TextView resultTextview;
+
     @Override
     public void onPreviewSizeChosen(final Size size, final int rotation) {
         final float textSizePx =
@@ -316,6 +321,35 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                             if (location != null && result.getConfidence() >= minimumConfidence) {
                                 canvas.drawRect(location, paint);
 
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Float predConfidence = result.getConfidence();
+                                        String predClassname = result.getTitle();
+                                        String predResult = "";
+                                        switch (predClassname) {
+                                            case "normal":
+                                                predResult += "정상적 생리혈\n";
+                                                break;
+                                            case "abnormal":
+                                                predResult += "비정상적 생리혈\n";
+                                                break;
+                                            case "none":
+                                                predResult += "생리혈 없음\n";
+                                                break;
+                                            default:
+                                                predResult = "";
+                                                break;
+                                        }
+
+                                        if (predConfidence >= 0.75) predResult += "정확도 높음";
+                                        else predResult += "정확도 보통";
+
+                                        resultTextview = (TextView) findViewById(R.id.text_camera_result);
+                                        resultTextview.setText(predResult);
+                                    }
+                                });
+
                                 cropToFrameTransform.mapRect(location);
                                 result.setLocation(location);
                                 mappedRecognitions.add(result);
@@ -328,6 +362,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                         requestRender();
                         computingDetection = false;
                     }
+
                 });
     }
 

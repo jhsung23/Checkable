@@ -22,4 +22,14 @@
     android:background="#000"
     tools:context=".CameraActivity">
 
+    <TextView
+        android:id="@+id/text_camera_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:text=" "
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
 </FrameLayout>
