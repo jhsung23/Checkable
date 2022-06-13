@@ -7,10 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="home_scan">#E8A79B</color>
+    <color name="home_scan">#EA9393</color>
     <color name="home_find">#8CA7EA</color>
     <color name="search_background">#85BEEC</color>
     <color name="search_item1">#CEE6EF</color>
     <color name="search_item2">#F3F3F3</color>
     <color name="progressbar">#939393</color>
+
+    <color name="resultGreen">#AED393</color>
+    <color name="resultRed">#E19679</color>
+    <color name="resultYellow">#E6CF8B</color>
+    <color name="resultBlue">#8CBCF5</color>
 </resources>
