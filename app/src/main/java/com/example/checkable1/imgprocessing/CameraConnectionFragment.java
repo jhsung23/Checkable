@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -45,6 +45,7 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import com.example.checkable1.R;
 import com.example.checkable1.env.Logger;
 
 /**

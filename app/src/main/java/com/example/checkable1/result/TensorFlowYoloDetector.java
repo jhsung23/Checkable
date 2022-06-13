@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.result;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -12,6 +12,7 @@ import java.util.PriorityQueue;
 
 import com.example.checkable1.env.SplitTimer;
 import com.example.checkable1.env.Logger;
+import com.example.checkable1.imgprocessing.Classifier;
 
 /* Copyright 2017 The TensorFlow Authors. All Rights Reserved.
 

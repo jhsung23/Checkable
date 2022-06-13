@@ -23,19 +23,19 @@
         android:theme="@style/Theme.Checkable1"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".NoneResultActivity"
+            android:name=".result.NoneResultActivity"
             android:exported="false" />
         <activity
-            android:name=".AbnormalResultActivity"
+            android:name=".result.AbnormalResultActivity"
             android:exported="false" />
         <activity
-            android:name=".NormalResultActivity"
+            android:name=".result.NormalResultActivity"
             android:exported="false" />
         <activity
-            android:name=".DetectorActivity"
+            android:name=".imgprocessing.DetectorActivity"
             android:exported="false" />
         <activity
-            android:name=".CameraActivity"
+            android:name=".imgprocessing.CameraActivity"
             android:exported="false" />
         <activity
             android:name=".hospital.SearchHospitalActivity"
