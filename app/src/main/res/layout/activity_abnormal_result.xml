@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AbnormalResultActivity">
+
+    <View
+        android:id="@+id/view_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/scanresult_view_abnormal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view_abnormal_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="7" />
+
+    <ImageView
+        android:id="@+id/image_abnormal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/abnormalblood"
+        app:layout_constraintBottom_toTopOf="@+id/text_abnormal_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_abnormal_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/result_abnormal"
+        android:textColor="#ffffff"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/view_abnormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_abnormal" />
+
+    <View
+        android:id="@+id/view_abnormal_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_abnormal"
+        app:layout_constraintVertical_weight="6" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_abnormal_confidence"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/scanresult_button_shape"
+        android:elevation="3dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toTopOf="@id/linear_abnormal_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_abnormal_bottom"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="정확도"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/text_abnormal_confidence"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="높은 정확도"
+            android:textSize="23dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_abnormal_color"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/scanresult_button_shape"
+        android:elevation="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/text_abnormal_explain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_abnormal_confidence"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="혈색"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/text_abnormal_color"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="어두운빛의\n좋지 않은 혈색"
+            android:textSize="23dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_abnormal_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_abnormal_intent"
+        app:layout_constraintTop_toBottomOf="@id/linear_abnormal_color"
+        android:text="현재 위치에서 가까운 병원 찾아드릴까요?"
+        android:textSize="17dp"
+        android:gravity="bottom"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <Button
+        android:id="@+id/button_abnormal_intent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/scanresult_button_shape"
+        android:backgroundTint="#E3B174"
+        android:elevation="3dp"
+        android:text="내 주변 병원 찾아보기"
+        android:textColor="#ffffff"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_abnormal_explain"
+        app:layout_constraintVertical_chainStyle="spread" />
+</androidx.constraintlayout.widget.ConstraintLayout>

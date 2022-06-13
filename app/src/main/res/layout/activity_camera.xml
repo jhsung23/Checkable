@@ -28,8 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:gravity="center_horizontal"
+        android:fontFamily="@font/happiness_sans_bold"
         android:text=" "
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="25dp"
         android:textColor="#ffffff"
         android:textSize="25dp" />
 </FrameLayout>

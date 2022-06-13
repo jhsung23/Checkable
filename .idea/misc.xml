@@ -6,12 +6,23 @@
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/circle_progress.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/home_round_rectangle_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/home_scan_rr_shape.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/home_search_rr_shape.xml" value="0.146" />
         <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/scanresult_button_shape.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/scanresult_view_abnormal.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/scanresult_view_none.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/scanresult_view_normal.xml" value="0.146" />
         <entry key="app/src/main/res/drawable/search_round_rectangle_background.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/tmp.xml" value="0.146" />
+        <entry key="app/src/main/res/font/font.xml" value="0.27037037037037037" />
+        <entry key="app/src/main/res/layout/activity_abnormal_result.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.11955420466058764" />
         <entry key="app/src/main/res/layout/activity_detector.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_search_hospital.xml" value="0.2870147705078125" />
+        <entry key="app/src/main/res/layout/activity_none_result.xml" value="0.22284698486328125" />
+        <entry key="app/src/main/res/layout/activity_scan_result.xml" value="0.2733184814453125" />
+        <entry key="app/src/main/res/layout/activity_search_hospital.xml" value="0.1" />
         <entry key="app/src/main/res/layout/camera_connection_fragment_tracking.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_camera_connection.xml" value="0.1794504359148551" />
         <entry key="app/src/main/res/layout/view_holder_item.xml" value="0.1" />
@@ -27,7 +38,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2870147705078125" />
+        <option name="scale" value="0.22284698486328125" />
       </ProjectState>
     </option>
   </component>

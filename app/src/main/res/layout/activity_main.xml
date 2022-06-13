@@ -14,7 +14,7 @@
         android:layout_marginTop="100dp"
         android:text="무엇을\n도와드릴까요?"
         android:textSize="35dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/happiness_sans_bold"
         app:layout_constraintBottom_toTopOf="@id/frame_home_scan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,14 +37,13 @@
             android:id="@+id/button_home_scan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/home_round_rectangle_shape"
-            android:backgroundTint="@color/home_scan" />
+            android:background="@drawable/home_scan_rr_shape" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_marginStart="25dp"
+            android:orientation="horizontal"
             android:weightSum="5">
 
             <ImageView
@@ -62,6 +61,7 @@
                 android:text="생리대\n스캔하기"
                 android:textColor="#ffffff"
                 android:textSize="35dp"
+                android:fontFamily="@font/happiness_sans_bold"
                 android:textStyle="bold" />
         </LinearLayout>
     </FrameLayout>
@@ -83,14 +83,13 @@
             android:id="@+id/button_home_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/home_round_rectangle_shape"
-            android:backgroundTint="@color/home_find" />
+            android:background="@drawable/home_search_rr_shape" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
             android:weightSum="5">
 
             <TextView
@@ -99,6 +98,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="내 주변\n병원 찾기"
+                android:fontFamily="@font/happiness_sans_bold"
                 android:textColor="#ffffff"
                 android:textSize="35dp"
                 android:textStyle="bold" />

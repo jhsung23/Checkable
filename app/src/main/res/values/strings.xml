@@ -3,5 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="result_normal">월경이\n시작된 것 같아요!</string>
+    <string name="result_none">아직 월경이\n시작되지 않았어요</string>
+    <string name="result_abnormal">좋지 않은 색의\n생리혈이 보여요</string>
 
 </resources>

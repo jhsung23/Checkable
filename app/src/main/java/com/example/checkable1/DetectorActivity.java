@@ -1,7 +1,6 @@
 package com.example.checkable1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.media.ImageReader;
-import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
@@ -18,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Vector;
 
 import com.example.checkable1.env.BorderedText;
@@ -89,7 +88,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     // Minimum detection confidence to track a detection.
     private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.6f;
     private static final float MINIMUM_CONFIDENCE_MULTIBOX = 0.1f;
-    private static final float MINIMUM_CONFIDENCE_YOLO = 0.6f;
+    private static final float MINIMUM_CONFIDENCE_YOLO = 0.5f;
 
     private static final boolean MAINTAIN_ASPECT = MODE == DetectorMode.YOLO;
 
@@ -121,6 +120,12 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     private BorderedText borderedText;
 
     private TextView resultTextview;
+
+    public PriorityQueue<ScanResult> priorityQueue = new PriorityQueue<>();
+
+    private boolean timeflag = false;
+    private long startResultTime;
+    private long endResultTime;
 
     @Override
     public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -321,11 +326,14 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                             if (location != null && result.getConfidence() >= minimumConfidence) {
                                 canvas.drawRect(location, paint);
 
+                                Float predConfidence = result.getConfidence();
+                                String predClassname = result.getTitle();
+
+                                priorityQueue.add(new ScanResult(predConfidence, predClassname));
+
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Float predConfidence = result.getConfidence();
-                                        String predClassname = result.getTitle();
                                         String predResult = "";
                                         switch (predClassname) {
                                             case "normal":
@@ -342,17 +350,29 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                                                 break;
                                         }
 
-                                        if (predConfidence >= 0.75) predResult += "정확도 높음";
-                                        else predResult += "정확도 보통";
+                                        if (predConfidence >= 0.7) predResult += "정확도 높음";
+                                        else if (predConfidence >= 0.6) predResult += "정확도 보통";
+                                        else predResult += "정확도 낮음";
 
                                         resultTextview = (TextView) findViewById(R.id.text_camera_result);
                                         resultTextview.setText(predResult);
                                     }
                                 });
 
+                                if (!timeflag) {
+                                    startResultTime = System.currentTimeMillis();
+                                    timeflag = true;
+                                }
+
                                 cropToFrameTransform.mapRect(location);
                                 result.setLocation(location);
                                 mappedRecognitions.add(result);
+                            }
+
+                            endResultTime = System.currentTimeMillis();
+                            if (timeflag && (endResultTime - startResultTime) / 1000 >= 7) {
+                                timeflag = false;
+                                showResultActivity();
                             }
                         }
 
@@ -379,5 +399,37 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     @Override
     public void onSetDebug(final boolean debug) {
         detector.enableStatLogging(debug);
+    }
+
+    void showResultActivity() {
+        Intent intent;
+        if (priorityQueue.peek() == null) finish();
+        else {
+            switch (priorityQueue.peek().getSrClassname()) {
+                case "normal":
+                    intent = new Intent(getApplicationContext(), NormalResultActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("confidence", priorityQueue.peek().getSrConfidence());
+                    startActivity(intent);
+                    finish();
+                    break;
+                case "abnormal":
+                    intent = new Intent(getApplicationContext(), AbnormalResultActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("confidence", priorityQueue.peek().getSrConfidence());
+                    startActivity(intent);
+                    finish();
+                    break;
+                case "none":
+                    intent = new Intent(getApplicationContext(), NoneResultActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("confidence", priorityQueue.peek().getSrConfidence());
+                    startActivity(intent);
+                    finish();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
