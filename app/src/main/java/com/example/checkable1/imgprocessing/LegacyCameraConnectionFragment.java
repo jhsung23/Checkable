@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import android.app.Fragment;
 import android.graphics.SurfaceTexture;
@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import java.io.IOException;
 import java.util.List;
 
+import com.example.checkable1.R;
 import com.example.checkable1.env.Logger;
 import com.example.checkable1.env.ImageUtils;
 

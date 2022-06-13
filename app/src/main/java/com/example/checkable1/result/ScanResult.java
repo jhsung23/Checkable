@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.result;
 
 public class ScanResult implements Comparable<ScanResult> {
 

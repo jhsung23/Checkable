@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.result;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.checkable1.MainActivity;
+import com.example.checkable1.R;
 
 public class NoneResultActivity extends AppCompatActivity {
 

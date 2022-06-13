@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,7 @@ import android.util.TypedValue;
 import android.view.View;
 
 import java.util.List;
-import com.example.checkable1.Classifier.Recognition;
+import com.example.checkable1.imgprocessing.Classifier.Recognition;
 
 /* Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 

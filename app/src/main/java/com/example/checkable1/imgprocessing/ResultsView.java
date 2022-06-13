@@ -1,7 +1,7 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import java.util.List;
-import com.example.checkable1.Classifier.Recognition;
+import com.example.checkable1.imgprocessing.Classifier.Recognition;
 
 /* Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 

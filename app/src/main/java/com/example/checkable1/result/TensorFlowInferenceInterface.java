@@ -1,10 +1,12 @@
-package com.example.checkable1;
+package com.example.checkable1.result;
 
 import android.content.res.AssetManager;
 import android.os.Build;
 import android.os.Trace;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.example.checkable1.imgprocessing.RunStats;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;

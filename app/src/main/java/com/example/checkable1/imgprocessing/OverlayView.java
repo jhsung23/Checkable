@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -9,7 +9,6 @@ import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.util.TypedValue;
-import android.widget.Toast;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,9 +16,8 @@ import java.util.Queue;
 
 import com.example.checkable1.env.ImageUtils;
 import com.example.checkable1.env.Logger;
-import com.example.checkable1.Classifier.Recognition;
+import com.example.checkable1.imgprocessing.Classifier.Recognition;
 import com.example.checkable1.env.BorderedText;
-import com.example.checkable1.Classifier;
 
 /* Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 

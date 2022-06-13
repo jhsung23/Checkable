@@ -1,6 +1,4 @@
-package com.example.checkable1;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.checkable1.imgprocessing;
 
 import android.Manifest;
 import android.app.Activity;
@@ -27,6 +25,7 @@ import android.widget.Toast;
 
 import java.nio.ByteBuffer;
 
+import com.example.checkable1.R;
 import com.example.checkable1.env.Logger;
 import com.example.checkable1.env.ImageUtils;
 

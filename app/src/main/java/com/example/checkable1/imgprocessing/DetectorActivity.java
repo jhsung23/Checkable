@@ -1,4 +1,4 @@
-package com.example.checkable1;
+package com.example.checkable1.imgprocessing;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,10 +19,16 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Vector;
 
+import com.example.checkable1.R;
+import com.example.checkable1.result.ScanResult;
+import com.example.checkable1.result.TensorFlowYoloDetector;
 import com.example.checkable1.env.BorderedText;
 import com.example.checkable1.env.ImageUtils;
 import com.example.checkable1.env.Logger;
-import com.example.checkable1.OverlayView.DrawCallback;
+import com.example.checkable1.imgprocessing.OverlayView.DrawCallback;
+import com.example.checkable1.result.AbnormalResultActivity;
+import com.example.checkable1.result.NoneResultActivity;
+import com.example.checkable1.result.NormalResultActivity;
 import com.example.checkable1.tracking.MultiBoxTracker;
 
 /*

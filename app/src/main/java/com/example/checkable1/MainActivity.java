@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.checkable1.hospital.SearchHospitalActivity;
+import com.example.checkable1.imgprocessing.DetectorActivity;
 
 public class MainActivity extends AppCompatActivity {
 
