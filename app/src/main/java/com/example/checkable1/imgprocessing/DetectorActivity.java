@@ -1,5 +1,6 @@
 package com.example.checkable1.imgprocessing;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,6 +11,7 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.media.ImageReader;
 import android.os.SystemClock;
+import android.os.Vibrator;
 import android.util.Size;
 import android.util.TypedValue;
 import android.widget.TextView;
@@ -132,6 +134,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     private boolean timeflag = false;
     private long startResultTime;
     private long endResultTime;
+    private Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
     @Override
     public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -411,6 +414,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
         Intent intent;
         if (priorityQueue.peek() == null) finish();
         else {
+            vibrator.vibrate(1000);
             switch (priorityQueue.peek().getSrClassname()) {
                 case "normal":
                     intent = new Intent(getApplicationContext(), NormalResultActivity.class);

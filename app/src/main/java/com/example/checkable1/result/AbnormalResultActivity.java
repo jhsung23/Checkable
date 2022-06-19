@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.checkable1.MainActivity;
 import com.example.checkable1.R;
 import com.example.checkable1.hospital.SearchHospitalActivity;
 
@@ -25,6 +26,7 @@ public class AbnormalResultActivity extends AppCompatActivity {
     //layout
     TextView confidenceTextView;
     Button goSearchHospitalButton;
+    Button goHomeButton;
 
     //request
     private boolean isAccessFineLocation = false;
@@ -41,6 +43,7 @@ public class AbnormalResultActivity extends AppCompatActivity {
 
         confidenceTextView = (TextView) findViewById(R.id.text_abnormal_confidence);
         goSearchHospitalButton = (Button) findViewById(R.id.button_abnormal_intent);
+        goHomeButton = (Button) findViewById(R.id.button_abnormal_home);
 
         //image detecting 결과값 -> Textview
         Float resultConfidence = getIntent().getFloatExtra("confidence", 0);
@@ -63,6 +66,17 @@ public class AbnormalResultActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), SearchHospitalActivity.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        //홈화면으로 이동
+        goHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/back_button_icon.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/circle_progress.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/home_round_rectangle_shape.xml" value="0.1" />
@@ -16,13 +17,13 @@
         <entry key="app/src/main/res/drawable/search_round_rectangle_background.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/tmp.xml" value="0.146" />
         <entry key="app/src/main/res/font/font.xml" value="0.27037037037037037" />
-        <entry key="app/src/main/res/layout/activity_abnormal_result.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/activity_abnormal_result.xml" value="0.18595428466796876" />
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.11955420466058764" />
         <entry key="app/src/main/res/layout/activity_detector.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_none_result.xml" value="0.22284698486328125" />
         <entry key="app/src/main/res/layout/activity_scan_result.xml" value="0.2733184814453125" />
-        <entry key="app/src/main/res/layout/activity_search_hospital.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_search_hospital.xml" value="0.2835966972455586" />
         <entry key="app/src/main/res/layout/camera_connection_fragment_tracking.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_camera_connection.xml" value="0.1794504359148551" />
         <entry key="app/src/main/res/layout/view_holder_item.xml" value="0.1" />
@@ -38,7 +39,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.22284698486328125" />
+        <option name="scale" value="0.3228454172366621" />
       </ProjectState>
     </option>
   </component>

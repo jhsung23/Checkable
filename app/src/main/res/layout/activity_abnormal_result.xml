@@ -86,7 +86,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="높은 정확도"
+            android:text="정확도 높음"
             android:textSize="23dp" />
     </LinearLayout>
 
@@ -129,16 +129,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button_abnormal_intent"
-        app:layout_constraintTop_toBottomOf="@id/linear_abnormal_color"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom"
         android:text="현재 위치에서 가까운 병원 찾아드릴까요?"
         android:textSize="17dp"
-        android:gravity="bottom"
-        app:layout_constraintVertical_chainStyle="spread"/>
+        app:layout_constraintBottom_toTopOf="@id/linear_abnormal_intent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_abnormal_color"
+        app:layout_constraintVertical_chainStyle="spread" />
 
+    <LinearLayout
+        android:id="@+id/linear_abnormal_intent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_abnormal_explain"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <Button
+            android:id="@+id/button_abnormal_intent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="3.5"
+            android:background="@drawable/scanresult_button_shape"
+            android:backgroundTint="#E3B174"
+            android:elevation="3dp"
+            android:text="내 주변 병원 찾아보기"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/button_abnormal_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/scanresult_button_shape"
+            android:elevation="3dp"
+            android:text="홈 화면\n이동"
+            android:textColor="@android:color/tab_indicator_text"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+    <!--
     <Button
         android:id="@+id/button_abnormal_intent"
         android:layout_width="match_parent"
@@ -157,4 +201,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_abnormal_explain"
         app:layout_constraintVertical_chainStyle="spread" />
+        -->
 </androidx.constraintlayout.widget.ConstraintLayout>

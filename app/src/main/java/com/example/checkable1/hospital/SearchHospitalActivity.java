@@ -18,9 +18,11 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.checkable1.MainActivity;
 import com.example.checkable1.R;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -54,6 +56,7 @@ public class SearchHospitalActivity extends AppCompatActivity {
     private Double curLongitude;
 
     //Layout
+    Button goHomeButton;
     RecyclerView recyclerView;
     HospitalItemAdapter hospitalItemAdapter;
     ProgressBar progressBar;
@@ -66,6 +69,18 @@ public class SearchHospitalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_hospital);
+
+        goHomeButton = (Button) findViewById(R.id.button_searchHospital_goHome);
+
+        goHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar_searchHospital);
         //화면로드됨
