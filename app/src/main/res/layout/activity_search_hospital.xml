@@ -39,7 +39,7 @@
         android:textColor="#ffffff"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/text_searchHospital_inform"
+        app:layout_constraintBottom_toTopOf="@+id/text_searchHospital_inform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_searchHospital_goHome" />
