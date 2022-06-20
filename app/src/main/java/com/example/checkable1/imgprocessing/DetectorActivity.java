@@ -134,7 +134,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
     private boolean timeflag = false;
     private long startResultTime;
     private long endResultTime;
-    private Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+    private Vibrator vibrator;
 
     @Override
     public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -414,6 +414,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
         Intent intent;
         if (priorityQueue.peek() == null) finish();
         else {
+            vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(1000);
             switch (priorityQueue.peek().getSrClassname()) {
                 case "normal":
