@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
         android:text="무엇을\n도와드릴까요?"
         android:textSize="35dp"
-        android:fontFamily="@font/happiness_sans_bold"
         app:layout_constraintBottom_toTopOf="@id/frame_home_scan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="15dp"
+        android:contentDescription="생리대 스캔하기"
         app:layout_constraintBottom_toTopOf="@id/frame_home_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,18 +38,21 @@
             android:id="@+id/button_home_scan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/home_scan_rr_shape" />
+            android:background="@drawable/home_scan_rr_shape"
+            android:contentDescription="생리대 스캔하기" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="25dp"
+            android:contentDescription="생리대 스캔하기"
             android:orientation="horizontal"
             android:weightSum="5">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="생리대 스캔하기"
                 android:layout_weight="3"
                 android:scaleType="fitCenter"
                 android:src="@drawable/scanning" />
@@ -57,11 +61,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:fontFamily="@font/happiness_sans_bold"
                 android:gravity="center"
                 android:text="생리대\n스캔하기"
                 android:textColor="#ffffff"
                 android:textSize="35dp"
-                android:fontFamily="@font/happiness_sans_bold"
                 android:textStyle="bold" />
         </LinearLayout>
     </FrameLayout>
@@ -73,6 +77,7 @@
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
+        android:contentDescription="내 주변 병원 찾기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +88,14 @@
             android:id="@+id/button_home_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/home_search_rr_shape" />
+            android:background="@drawable/home_search_rr_shape"
+            android:contentDescription="내 주변 병원 찾기" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="25dp"
+            android:contentDescription="내 주변 병원 찾기"
             android:orientation="horizontal"
             android:weightSum="5">
 
@@ -96,9 +103,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:fontFamily="@font/happiness_sans_bold"
                 android:gravity="center"
                 android:text="내 주변\n병원 찾기"
-                android:fontFamily="@font/happiness_sans_bold"
                 android:textColor="#ffffff"
                 android:textSize="35dp"
                 android:textStyle="bold" />
@@ -107,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:contentDescription="내 주변 병원 찾기"
                 android:scaleType="fitCenter"
                 android:src="@drawable/map" />
 
