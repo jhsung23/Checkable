@@ -12,6 +12,7 @@ import android.graphics.Typeface;
 import android.media.ImageReader;
 import android.os.SystemClock;
 import android.os.Vibrator;
+import android.util.Log;
 import android.util.Size;
 import android.util.TypedValue;
 import android.widget.TextView;
@@ -338,6 +339,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                                 Float predConfidence = result.getConfidence();
                                 String predClassname = result.getTitle();
 
+                                if(predClassname=="none") Log.d("Confidence flow", predConfidence.toString());
                                 priorityQueue.add(new ScanResult(predConfidence, predClassname));
 
                                 runOnUiThread(new Runnable() {
@@ -379,7 +381,7 @@ public class DetectorActivity extends CameraActivity implements ImageReader.OnIm
                             }
 
                             endResultTime = System.currentTimeMillis();
-                            if (timeflag && (endResultTime - startResultTime) / 1000 >= 7) {
+                            if (timeflag && (endResultTime - startResultTime) / 1000 >= 10) {
                                 timeflag = false;
                                 showResultActivity();
                             }
