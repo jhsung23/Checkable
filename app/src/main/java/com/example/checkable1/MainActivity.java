@@ -70,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
         guideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("TAG", "clicked GuideButton");
+                Intent intent = new Intent(getApplicationContext(), GuideEnterActivity.class);
+                startActivity(intent);
+                Log.d(TAG, "intent");
             }
         });
 
