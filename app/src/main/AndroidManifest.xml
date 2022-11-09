@@ -24,6 +24,9 @@
         android:theme="@style/Theme.Checkable1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".GuideEnterActivity"
+            android:exported="false" />
+        <activity
             android:name=".OnBoarding_Scan2"
             android:exported="false" />
         <activity
