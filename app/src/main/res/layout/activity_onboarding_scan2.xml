@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoarding_Scan2">
+
+    <TextView
+        android:id="@+id/text_scan1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="생리대 스캔하기 기능"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_scan2_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:lineSpacingExtra="10sp"
+        android:padding="14sp"
+        android:text="\t첫째, 생리가 시작되지 않아 빈 생리대가 감지된다면, 아직 월경이 시작되지 않았다는 초록색의 결과 화면이 나타납니다.
+        \n\n\t둘째, 생리가 시작되어 붉은색 혈, 갈색 혈이 묻은 생리대가 감지된다면, 월경이 시작되었다는 빨간색의 결과 화면이 나타납니다.
+        \n\n\t셋째, 자궁 건강에 이상이 있는 자주색 혈, 검은색 혈이 묻은 생리대가 감지된다면, 좋지 않은 색의 생리혈이 감지되었다는 황토색의 결과 화면이 나타납니다."
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_scan2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_scan1_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_scan2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_scan2_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_round_rectangle_shape"
+            android:backgroundTint="#E3E3E3"
+            android:fontFamily="@font/happiness_sans_bold"
+            android:text="이전" />
+
+        <Button
+            android:id="@+id/button_scan2_next"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_round_rectangle_shape"
+            android:backgroundTint="#E3E3E3"
+            android:fontFamily="@font/happiness_sans_bold"
+            android:text="다음" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
