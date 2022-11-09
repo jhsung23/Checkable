@@ -3,28 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Checkable/app/src/main/res/layout/activity_main.xml" value="0.24635416666666668" />
-        <entry key="..\:/Checkable/app/src/main/res/layout/activity_none_result.xml" value="0.24635416666666668" />
-        <entry key="..\:/Checkable/app/src/main/res/layout/activity_onboarding_hospital_page.xml" value="0.264" />
-        <entry key="..\:/Checkable/app/src/main/res/layout/activity_onboarding_start_page.xml" value="0.264" />
-        <entry key="..\:/Checkable/app/src/main/res/layout/activity_search_hospital.xml" value="0.21195652173913043" />
-        <entry key="..\:/Checkable/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.252" />
-        <entry key="..\:/Checkable/app/src/main/res/mipmap-anydpi-v26/ic_main.xml" value="0.252" />
-
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/circle_progress.xml" value="0.239" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_round_rectangle_shape.xml" value="0.239" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_scan_rr_shape.xml" value="0.239" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_search_rr_shape.xml" value="0.239" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/search_round_rectangle_background.xml" value="0.239" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_scan1.xml" value="0.264" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_scan2.xml" value="0.264" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_search_hospital.xml" value="0.18795289855072464" />
-        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/camera_connection_fragment_tracking.xml" value="0.18795289855072464" />
-
         <entry key="app/src/main/res/drawable/back_button_icon.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/circle_progress.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/home_guide_rr_shape.xml" value="0.1215" />
+        <entry key="app/src/main/res/drawable/home_hospital_rr_shape.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/home_round_rectangle_shape.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/home_scan_rr_shape.xml" value="0.146" />
         <entry key="app/src/main/res/drawable/home_search_rr_shape.xml" value="0.146" />
@@ -39,8 +22,13 @@
         <entry key="app/src/main/res/layout/activity_abnormal_result.xml" value="0.18595428466796876" />
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.11955420466058764" />
         <entry key="app/src/main/res/layout/activity_detector.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_guide_enter.xml" value="0.1962890207522871" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1940928270042194" />
         <entry key="app/src/main/res/layout/activity_none_result.xml" value="0.22284698486328125" />
+        <entry key="app/src/main/res/layout/activity_onboarding_hospital_page.xml" value="0.14266304347826086" />
+        <entry key="app/src/main/res/layout/activity_onboarding_scan1.xml" value="0.14266304347826086" />
+        <entry key="app/src/main/res/layout/activity_onboarding_scan2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_onboarding_start_page.xml" value="0.14266304347826086" />
         <entry key="app/src/main/res/layout/activity_scan_result.xml" value="0.2733184814453125" />
         <entry key="app/src/main/res/layout/activity_search_hospital.xml" value="0.2835966972455586" />
         <entry key="app/src/main/res/layout/camera_connection_fragment_tracking.xml" value="0.1" />
@@ -49,7 +37,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
@@ -58,7 +46,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.3228454172366621" />
+        <option name="scale" value="0.1962890207522871" />
       </ProjectState>
     </option>
   </component>
