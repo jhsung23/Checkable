@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     //Layout
     ImageButton scanButton;
     ImageButton mapButton;
+    ImageButton guideButton;
 
     //request
     private boolean isAccessFineLocation = false;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         scanButton = (ImageButton) findViewById(R.id.button_home_scan);
         mapButton = (ImageButton) findViewById(R.id.button_home_map);
+        guideButton = (ImageButton) findViewById(R.id.button_home_guide);
 
         //scanButton 클릭 시 스캔 카메라 화면 띄우기
         scanButton.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), SearchHospitalActivity.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        guideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("TAG", "clicked GuideButton");
             }
         });
 
