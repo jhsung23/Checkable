@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.checkable1.hospital.SearchHospitalActivity;
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         guideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), GuideEnterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), OnBoarding_StartPage.class);
                 startActivity(intent);
                 Log.d(TAG, "intent");
             }
