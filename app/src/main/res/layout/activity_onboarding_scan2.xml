@@ -10,9 +10,9 @@
         android:id="@+id/text_scan1_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/happiness_sans_bold"
-        android:text="생리대 스캔하기 기능"
+        android:text="스캔 결과 화면 설명"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,17 +23,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/happiness_sans_bold"
+        android:gravity="center"
         android:lineSpacingExtra="10sp"
         android:padding="14sp"
-        android:text="\t첫째, 생리가 시작되지 않아 빈 생리대가 감지된다면, 아직 월경이 시작되지 않았다는 초록색의 결과 화면이 나타납니다.
-        \n\n\t둘째, 생리가 시작되어 붉은색 혈, 갈색 혈이 묻은 생리대가 감지된다면, 월경이 시작되었다는 빨간색의 결과 화면이 나타납니다.
-        \n\n\t셋째, 자궁 건강에 이상이 있는 자주색 혈, 검은색 혈이 묻은 생리대가 감지된다면, 좋지 않은 색의 생리혈이 감지되었다는 황토색의 결과 화면이 나타납니다."
-        android:textAlignment="textStart"
-        android:textSize="16sp"
+        android:text="스캔한 생리대를 토대로\n앱은 월경 시작 여부를 판단하고,\n스캔 정확도와 함께\n감지된 혈의 색상을 안내합니다.\n\n결과화면은\n첫째, 월경이 시작되지 않은 경우,\n둘째, 정상적인 생리혈인\n붉은색, 갈색 혈이 감지된 경우,\n셋째, 자궁 질환이 의심되는\n자주색 혈, 검은색 혈이 감지된 경우,\n이렇게 3가지 중 하나로 나타납니다."
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_scan2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_scan1_title" />
+        app:layout_constraintTop_toBottomOf="@id/text_scan1_title" />
 
     <LinearLayout
         android:id="@+id/linearLayout_scan2"
@@ -58,7 +56,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="이전"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button_scan2_next"
@@ -71,7 +69,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="다음"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
