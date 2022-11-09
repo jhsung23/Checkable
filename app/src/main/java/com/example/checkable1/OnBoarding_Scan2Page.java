@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class OnBoarding_Scan2 extends AppCompatActivity {
+public class OnBoarding_Scan2Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

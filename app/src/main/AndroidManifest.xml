@@ -24,6 +24,9 @@
         android:theme="@style/Theme.Checkable1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".OnBoarding_HelpPage"
+            android:exported="false" />
+        <activity
             android:name=".OnBoarding_HospitalPage"
             android:exported="false" />
         <activity
@@ -33,10 +36,10 @@
             android:name=".GuideEnterActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoarding_Scan2"
+            android:name=".OnBoarding_Scan2Page"
             android:exported="false" />
         <activity
-            android:name=".OnBoarding_Scan1"
+            android:name=".OnBoarding_Scan1Page"
             android:exported="false" />
         <activity
             android:name=".result.NoneResultActivity"
