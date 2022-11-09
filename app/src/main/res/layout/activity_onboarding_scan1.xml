@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoarding_Scan1">
+
+    <TextView
+        android:id="@+id/text_scan1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="생리대 스캔하기 기능"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_scan1_img"
+        android:layout_width="297dp"
+        android:layout_height="173dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:contentDescription="생리대 스캔하기 버튼 이미지"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_scan1_title"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <ImageButton
+            android:id="@+id/button_scan1_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_scan_rr_shape"
+            android:clickable="false"
+            android:contentDescription="생리대 스캔하기 버튼 이미지" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:contentDescription="생리대 스캔하기 버튼 이미지"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:clickable="false"
+                android:contentDescription="생리대 스캔하기 버튼 이미지"
+                android:scaleType="fitCenter"
+                android:src="@drawable/scanning" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:fontFamily="@font/happiness_sans_bold"
+                android:gravity="center"
+                android:text="생리대\n스캔하기"
+                android:textColor="#ffffff"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_scan1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_scan1_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_round_rectangle_shape"
+            android:backgroundTint="#E3E3E3"
+            android:fontFamily="@font/happiness_sans_bold"
+            android:text="이전" />
+
+        <Button
+            android:id="@+id/button_scan1_next"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_round_rectangle_shape"
+            android:backgroundTint="#E3E3E3"
+            android:fontFamily="@font/happiness_sans_bold"
+            android:text="다음" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_scan1_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:lineSpacingExtra="10sp"
+        android:padding="14sp"
+        android:text="생리대 스캔하기 버튼을 클릭하면 카메라가 실행됩니다. \n생리대 감지 후 7초간 결과 분석이 진행되니 기다려주세요. \n분석이 끝나면 진동알림과 함께 결과 화면이 출력됩니다. \n결과 화면은 생리혈 색상에 따라 3가지 중 하나가 나타납니다."
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_scan1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_scan1_img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

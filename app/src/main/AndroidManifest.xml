@@ -30,6 +30,15 @@
             android:name=".OnBoarding_StartPage"
             android:exported="false" />
         <activity
+            android:name=".GuideEnterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding_Scan2"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding_Scan1"
+            android:exported="false" />
+        <activity
             android:name=".result.NoneResultActivity"
             android:exported="false" />
         <activity
