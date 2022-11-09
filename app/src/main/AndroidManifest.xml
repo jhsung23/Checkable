@@ -24,6 +24,12 @@
         android:theme="@style/Theme.Checkable1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".OnBoarding_HospitalPage"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding_StartPage"
+            android:exported="false" />
+        <activity
             android:name=".GuideEnterActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoarding_StartPage">
+
+    <TextView
+        android:id="@+id/text_start_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="반가워요!" />
+
+    <Button
+        android:id="@+id/button_start_next"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="다음"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/home_round_rectangle_shape"
+        android:backgroundTint="#E3E3E3"/>
+
+    <ImageView
+        android:id="@+id/imageView_start_checkableIcon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="체커블 아이콘"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_start_welcome"
+        app:srcCompat="@mipmap/ic_main" />
+
+    <TextView
+        android:id="@+id/text_start_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:lineSpacingExtra="10sp"
+        android:padding="14sp"
+        android:text="\t체커블은 확인할 수 있다는 뜻을 가진 Checkable과 혈을 의미하는 blood의 합성어로 생리유무를 파악할 수 있는 애플리케이션입니다. \n\t더 이상 후각과 촉각에 의존하지 않고 체커블을 통해 편리하게 생리유무를 판단해보세요."
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_start_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_start_checkableIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
