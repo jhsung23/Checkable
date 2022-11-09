@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/home_hospital_rr_shape"
+            android:clickable="false"
             android:contentDescription="내 주변 병원 찾기" />
 
         <LinearLayout
@@ -73,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/happiness_sans_bold"
+        android:gravity="center"
         android:lineSpacingExtra="10sp"
         android:padding="14sp"
         android:text="\t내 주변 병원 찾기 버튼을 클릭하면 현재 위치를 기반으로 2km 내에 있는 여성병원 목록을 출력합니다.\n\t여성병원에 대한 정보와 함께 화면 오른쪽 전화걸기 아이콘을 누르면 전화연결이 가능합니다. "
@@ -86,6 +88,9 @@
         android:id="@+id/linearlayout_hospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,25 +100,27 @@
             android:id="@+id/button_hospital_previous"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
+            android:background="@drawable/home_round_rectangle_shape"
+            android:backgroundTint="#E3E3E3"
             android:fontFamily="@font/happiness_sans_bold"
             android:text="이전"
-            android:textSize="20dp"
-            android:layout_margin="2dp"
-            android:background="@drawable/home_round_rectangle_shape"
-            android:backgroundTint="#E3E3E3"/>
+            android:textColor="#808080"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button_hospital_next"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:layout_margin="2dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/home_round_rectangle_shape"
             android:backgroundTint="#E3E3E3"
             android:fontFamily="@font/happiness_sans_bold"
             android:text="다음"
-            android:textSize="20dp" />
+            android:textColor="#808080"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

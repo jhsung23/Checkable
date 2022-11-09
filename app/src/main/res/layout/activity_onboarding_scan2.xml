@@ -39,6 +39,9 @@
         android:id="@+id/linearLayout_scan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,23 +51,27 @@
             android:id="@+id/button_scan2_previous"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:layout_margin="2dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:background="@drawable/home_round_rectangle_shape"
             android:backgroundTint="#E3E3E3"
             android:fontFamily="@font/happiness_sans_bold"
-            android:text="이전" />
+            android:text="이전"
+            android:textColor="#808080"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/button_scan2_next"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:layout_margin="2dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/home_round_rectangle_shape"
             android:backgroundTint="#E3E3E3"
             android:fontFamily="@font/happiness_sans_bold"
-            android:text="다음" />
+            android:text="다음"
+            android:textColor="#808080"
+            android:textSize="15dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
