@@ -22,7 +22,7 @@ public class OnBoarding_StartPage extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), OnBoarding_Scan1.class);
+                Intent intent = new Intent(getApplicationContext(), OnBoarding_Scan1Page.class);
                 startActivity(intent);
                 Log.d("TAG", "intent");
             }

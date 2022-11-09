@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/circle_progress.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_hospital_rr_shape.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_round_rectangle_shape.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_scan_rr_shape.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/home_search_rr_shape.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/drawable/search_round_rectangle_background.xml" value="0.239" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_guide_enter.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_on_boarding_help_page.xml" value="0.264" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_hospital_page.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_scan1.xml" value="0.264" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_scan2.xml" value="0.264" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_onboarding_start_page.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/activity_search_hospital.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/duggi/Desktop/Checkable/app/src/main/res/layout/camera_connection_fragment_tracking.xml" value="0.18795289855072464" />
         <entry key="app/src/main/res/drawable/back_button_icon.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.1155" />
         <entry key="app/src/main/res/drawable/circle_progress.xml" value="0.1" />

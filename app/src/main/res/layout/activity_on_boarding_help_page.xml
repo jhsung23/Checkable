@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoarding_HelpPage">
+
+    <TextView
+        android:id="@+id/text_help_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="도움말 기능"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_help_guide"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="50dp"
+        android:clickable="false"
+        android:contentDescription="앱 가이드 버튼"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_help_title"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <ImageButton
+            android:id="@+id/button_help_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_guide_rr_shape"
+            android:clickable="false"
+            android:contentDescription="앱 가이드 버튼" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:clickable="false"
+            android:contentDescription="앱 가이드 버튼"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:clickable="false"
+                android:contentDescription="앱 가이드 버튼"
+                android:padding="15dp"
+                android:src="@drawable/information" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:fontFamily="@font/happiness_sans_bold"
+                android:gravity="center"
+                android:text="앱 이용 안내"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_scan1_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:lineSpacingExtra="10sp"
+        android:padding="14sp"
+        android:text="도움말 버튼을 클릭하면,\n지금까지의 안내 내용을 다시 확인할 수 있습니다."
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_help_useApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_help_guide" />
+
+    <Button
+        android:id="@+id/button_help_useApp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/happiness_sans_bold"
+        android:text="앱 사용하기"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/home_round_rectangle_shape"
+        android:backgroundTint="#E3E3E3"
+        android:layout_margin="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

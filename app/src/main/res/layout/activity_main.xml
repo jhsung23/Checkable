@@ -163,7 +163,7 @@
                 android:layout_weight="2"
                 android:fontFamily="@font/happiness_sans_bold"
                 android:gravity="center"
-                android:text="어플 이용 안내"
+                android:text="앱 이용 안내"
                 android:textColor="#ffffff"
                 android:textSize="30dp"
                 android:textStyle="bold" />
