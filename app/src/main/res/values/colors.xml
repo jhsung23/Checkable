@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="home_scan">#EA9393</color>
     <color name="home_find">#8CA7EA</color>
+    <color name="home_guide">#8FC867</color>
     <color name="search_background">#85BEEC</color>
     <color name="search_item1">#CEE6EF</color>
     <color name="search_item2">#F3F3F3</color>
