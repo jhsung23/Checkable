@@ -6,7 +6,8 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
@@ -22,6 +23,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Checkable1"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".OnBoarding_HospitalPage"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoarding_StartPage"
+            android:exported="false" />
         <activity
             android:name=".result.NoneResultActivity"
             android:exported="false" />
