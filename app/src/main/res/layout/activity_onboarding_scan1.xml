@@ -10,7 +10,7 @@
         android:id="@+id/text_scan1_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/happiness_sans_bold"
         android:text="생리대 스캔하기 기능"
         android:textSize="34sp"
@@ -95,7 +95,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="이전"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button_scan1_next"
@@ -108,7 +108,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="다음"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
     </LinearLayout>
 
     <TextView
@@ -118,9 +118,9 @@
         android:fontFamily="@font/happiness_sans_bold"
         android:lineSpacingExtra="10sp"
         android:padding="14sp"
-        android:text="생리대 스캔하기 버튼을 클릭하면 카메라가 실행됩니다. \n생리대 감지 후 7초간 결과 분석이 진행되니 기다려주세요. \n분석이 끝나면 진동알림과 함께 결과 화면이 출력됩니다. \n결과 화면은 생리혈 색상에 따라 3가지 중 하나가 나타납니다."
+        android:text="생리대 스캔하기 버튼을 누르면\n실행되는 카메라로 생리대를 비춰 주세요.\n생리대를 인식하면 7초간 결과 분석이 진행되며\n진동 알림과 함께 결과 화면이 나타납니다."
         android:textAlignment="center"
-        android:textSize="15sp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_scan1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -61,7 +61,7 @@
         android:id="@+id/text_hospital_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/happiness_sans_bold"
         android:text="내 주변 병원 찾기 기능"
         android:textSize="34dp"
@@ -77,8 +77,8 @@
         android:gravity="center"
         android:lineSpacingExtra="10sp"
         android:padding="14sp"
-        android:text="\t내 주변 병원 찾기 버튼을 클릭하면 현재 위치를 기반으로 2km 내에 있는 여성병원 목록을 출력합니다.\n\t여성병원에 대한 정보와 함께 화면 오른쪽 전화걸기 아이콘을 누르면 전화연결이 가능합니다. "
-        android:textSize="15sp"
+        android:text="\t내 주변 병원 찾기 버튼을 누르면\n2km 내의 여성병원 목록이 나타납니다.\n\n여성병원에 대한 정보와 함께\n화면 가장 오른쪽에 나타나는\n전화걸기 아이콘을 누르면\n해당 병원으로 전화를 걸 수 있습니다."
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/linearlayout_hospital"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="이전"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button_hospital_next"
@@ -120,7 +120,7 @@
             android:fontFamily="@font/happiness_sans_bold"
             android:text="다음"
             android:textColor="#808080"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
 
     </LinearLayout>
 
