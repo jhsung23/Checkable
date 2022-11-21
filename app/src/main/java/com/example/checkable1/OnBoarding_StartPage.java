@@ -14,6 +14,7 @@ public class OnBoarding_StartPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_Checkable1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding_start_page);
 
