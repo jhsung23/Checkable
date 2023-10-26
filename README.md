@@ -18,13 +18,13 @@ Check와 Blood의 합성어로 만든 Checkable은 휴대폰의 카메라로 생
 
 ## 🎬 애플리케이션 시연 영상
 
-[Checkable 시연 영상](https://www.youtube.com/watch?v=wrBSA2s5jOs) (6분 11초부터 시연이 시작됩니다.)
+[Checkable 시연 영상](https://youtu.be/wrBSA2s5jOs?t=371)
 
 ## 📱 실행 화면
 
 | 홈화면 | 온보딩 화면 | 생리대 스캔 화면 | 스캔 결과 화면 | 병원 안내 화면 |
 | ------ | ----------- | ---------------- | -------------- | -------------- |
-|<img width="137" alt="홈화면" src="https://github.com/jhsung23/Checkable/assets/69228045/e91c9a86-a660-4546-bb4f-42f0f5349082">|<img width="652" alt="온보딩화면" src="https://github.com/jhsung23/Checkable/assets/69228045/98696b46-d05a-41b3-84f0-521049f709ae">|<img width="522" alt="스캔화면" src="https://github.com/jhsung23/Checkable/assets/69228045/5a701057-887b-40ce-900d-6b5d753e576b">|<img width="403" alt="결과화면" src="https://github.com/jhsung23/Checkable/assets/69228045/71f4046d-9509-4af6-bf63-e3be2909175b">|<img width="287" alt="병원" src="https://github.com/jhsung23/Checkable/assets/69228045/7794e12d-c88d-4dfc-a17a-6d056d64adbb">|
+|<img width="300" alt="홈화면" src="https://github.com/jhsung23/Checkable/assets/69228045/e91c9a86-a660-4546-bb4f-42f0f5349082">|<img width="1300" alt="온보딩화면" src="https://github.com/jhsung23/Checkable/assets/69228045/98696b46-d05a-41b3-84f0-521049f709ae">|<img width="1000" alt="스캔화면" src="https://github.com/jhsung23/Checkable/assets/69228045/5a701057-887b-40ce-900d-6b5d753e576b">|<img width="800" alt="결과화면" src="https://github.com/jhsung23/Checkable/assets/69228045/71f4046d-9509-4af6-bf63-e3be2909175b">|<img width="560" alt="병원" src="https://github.com/jhsung23/Checkable/assets/69228045/7794e12d-c88d-4dfc-a17a-6d056d64adbb">|
 
 
 ## 🛠️ 기술 스택
