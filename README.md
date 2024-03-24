@@ -1,3 +1,4 @@
+![Untitled](https://github.com/jhsung23/Checkable/assets/69228045/cb01d171-101f-429a-9d19-e33d184e074b)
 # 🩸 Checkable
 
 > 2022 서울여자대학교 소프트웨어융합학과 졸업 프로젝트로 진행한 Checkable(여성 시각장애인 대상 월경 가이드 애플리케이션) 레포지토리입니다.
